@@ -1,0 +1,33 @@
+{
+	"meta": {
+		"image": "chupik-tileset.png",
+		"size": {"w":222,"h":129},
+		"scale": "1"
+	},
+	"frames": {
+		"chupik-1.png":
+		{
+			"frame": {"x":0,"y":0,"w":75,"h":129},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":75,"h":129},
+			"sourceSize": {"w":75,"h":129}
+		},
+		"chupik-3.png":
+		{
+			"frame": {"x":75,"y":0,"w":72,"h":129},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":72,"h":129},
+			"sourceSize": {"w":72,"h":129}
+		},
+		"chupik-2.png":
+		{
+			"frame": {"x":147,"y":0,"w":75,"h":126},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":75,"h":126},
+			"sourceSize": {"w":75,"h":126}
+		}
+	}
+}

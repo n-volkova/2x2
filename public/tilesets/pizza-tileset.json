@@ -1,0 +1,41 @@
+{
+	"meta": {
+		"image": "pizza-tileset.png",
+		"size": {"w":2876,"h":1120},
+		"scale": "1"
+	},
+	"frames": {
+		"pizza-bg.png":
+		{
+			"frame": {"x":4,"y":4,"w":1628,"h":992},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":1628,"h":992},
+			"sourceSize": {"w":1628,"h":992}
+		},
+		"pizza-mobile-bg.png":
+		{
+			"frame": {"x":1640,"y":4,"w":1232,"h":992},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":1232,"h":992},
+			"sourceSize": {"w":1232,"h":992}
+		},
+		"knock.png":
+		{
+			"frame": {"x":4,"y":1004,"w":142,"h":24},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":142,"h":24},
+			"sourceSize": {"w":142,"h":24}
+		},
+		"coin.png":
+		{
+			"frame": {"x":4,"y":1036,"w":80,"h":80},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":80,"h":80},
+			"sourceSize": {"w":80,"h":80}
+		}
+	}
+}

@@ -1,0 +1,49 @@
+
+
+.no-overflow.shake {
+    animation: shakeScene .5s linear;
+}
+
+@keyframes shakeScene {
+    8%, 41% {
+        transform: translateX(-2px);
+    }
+
+    25%, 58% {
+        transform: translateX(2px);
+    }
+
+    75% {
+        transform: translateX(-1px);
+    }
+
+    92% {
+        transform: translateX(1px);
+    }
+
+    0%, 100% {
+        transform: translateX(0);
+    }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+	transition: opacity .2s;
+}
+
+.fade-enter,
+.fade-leave-to {
+	opacity: 0;
+}
+
+
+.slide-enter-active,
+.slide-leave-active {
+	transition: all .2s;
+}
+
+.slide-enter,
+.slide-leave-to {
+	opacity: 0;
+	transform: translate3d(0, 100%, 0);
+}

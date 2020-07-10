@@ -1,0 +1,62 @@
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+html {
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    overflow: auto;
+}
+
+
+body {
+	margin: 0;
+	-webkit-overflow-scrolling: touch;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+h1, h2, h3, p {
+	line-height: 1;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+img {
+	pointer-events: none;
+}
+
+button {
+	padding: 0;
+	color: inherit;
+	font-family: inherit;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	outline: none;
+}
+
+input {
+	padding: 0;
+	color: inherit;
+	font: inherit;
+	line-height: normal;
+	background-color: transparent;
+	border: none;
+	outline: none;
+}

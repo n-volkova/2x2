@@ -1,0 +1,65 @@
+{
+	"meta": {
+		"image": "ff-tileset.png",
+		"size": {"w":2776,"h":2550},
+		"scale": "1"
+	},
+	"frames": {
+		"ff-bg-first.png":
+		{
+			"frame": {"x":4,"y":4,"w":1404,"h":1144},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":1404,"h":1144},
+			"sourceSize": {"w":1404,"h":1144}
+		},
+		"lights.png":
+		{
+			"frame": {"x":4,"y":1156,"w":1396,"h":214},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":1396,"h":214},
+			"sourceSize": {"w":1396,"h":214}
+		},
+		"ff-bg-last.png":
+		{
+			"frame": {"x":1416,"y":4,"w":1356,"h":1138},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":1356,"h":1138},
+			"sourceSize": {"w":1356,"h":1138}
+		},
+		"ff-bg-room.png":
+		{
+			"frame": {"x":4,"y":1378,"w":1354,"h":1168},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":1354,"h":1168},
+			"sourceSize": {"w":1354,"h":1168}
+		},
+		"ff-bg-middle.png":
+		{
+			"frame": {"x":1366,"y":1378,"w":1354,"h":1144},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":1354,"h":1144},
+			"sourceSize": {"w":1354,"h":1144}
+		},
+		"tree.png":
+		{
+			"frame": {"x":1416,"y":1150,"w":118,"h":164},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":118,"h":164},
+			"sourceSize": {"w":118,"h":164}
+		},
+		"slime.png":
+		{
+			"frame": {"x":1542,"y":1150,"w":68,"h":68},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":68,"h":68},
+			"sourceSize": {"w":68,"h":68}
+		}
+	}
+}

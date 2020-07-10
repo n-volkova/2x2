@@ -1,0 +1,41 @@
+{
+	"meta": {
+		"image": "owl-tileset.png",
+		"size": {"w":277,"h":261},
+		"scale": "1"
+	},
+	"frames": {
+		"owl-2.png":
+		{
+			"frame": {"x":0,"y":0,"w":91,"h":132},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":91,"h":132},
+			"sourceSize": {"w":91,"h":132}
+		},
+		"owl-1.png":
+		{
+			"frame": {"x":91,"y":0,"w":93,"h":129},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":129},
+			"sourceSize": {"w":93,"h":129}
+		},
+		"owl-4.png":
+		{
+			"frame": {"x":184,"y":0,"w":93,"h":129},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":93,"h":129},
+			"sourceSize": {"w":93,"h":129}
+		},
+		"owl-3.png":
+		{
+			"frame": {"x":0,"y":132,"w":87,"h":129},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":87,"h":129},
+			"sourceSize": {"w":87,"h":129}
+		}
+	}
+}

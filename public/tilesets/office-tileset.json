@@ -1,0 +1,41 @@
+{
+	"meta": {
+		"image": "office-tileset.png",
+		"size": {"w":1328,"h":1150},
+		"scale": "1"
+	},
+	"frames": {
+		"office-bg.png":
+		{
+			"frame": {"x":4,"y":4,"w":1320,"h":1096},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":1320,"h":1096},
+			"sourceSize": {"w":1320,"h":1096}
+		},
+		"health.png":
+		{
+			"frame": {"x":4,"y":1108,"w":201,"h":13},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":201,"h":13},
+			"sourceSize": {"w":201,"h":13}
+		},
+		"hit.png":
+		{
+			"frame": {"x":4,"y":1129,"w":73,"h":17},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":73,"h":17},
+			"sourceSize": {"w":73,"h":17}
+		},
+		"miss.png":
+		{
+			"frame": {"x":213,"y":1108,"w":64,"h":13},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":64,"h":13},
+			"sourceSize": {"w":64,"h":13}
+		}
+	}
+}

@@ -1,0 +1,105 @@
+{
+	"meta": {
+		"image": "beep-tileset.png",
+		"size": {"w":2748,"h":1824},
+		"scale": "1"
+	},
+	"frames": {
+		"city.png":
+		{
+			"frame": {"x":4,"y":4,"w":1368,"h":152},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":1368,"h":152},
+			"sourceSize": {"w":1368,"h":152}
+		},
+		"grass-canvas.png":
+		{
+			"frame": {"x":4,"y":164,"w":1364,"h":504},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":1364,"h":504},
+			"sourceSize": {"w":1364,"h":504}
+		},
+		"grass.png":
+		{
+			"frame": {"x":4,"y":676,"w":1364,"h":504},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":1364,"h":504},
+			"sourceSize": {"w":1364,"h":504}
+		},
+		"road-canvas.png":
+		{
+			"frame": {"x":1380,"y":4,"w":1364,"h":504},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":1364,"h":504},
+			"sourceSize": {"w":1364,"h":504}
+		},
+		"road.png":
+		{
+			"frame": {"x":1380,"y":516,"w":1364,"h":504},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":1364,"h":504},
+			"sourceSize": {"w":1364,"h":504}
+		},
+		"sky.png":
+		{
+			"frame": {"x":4,"y":1188,"w":1362,"h":632},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":1362,"h":632},
+			"sourceSize": {"w":1362,"h":632}
+		},
+		"car-red.png":
+		{
+			"frame": {"x":1374,"y":1188,"w":264,"h":174},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":264,"h":174},
+			"sourceSize": {"w":264,"h":174}
+		},
+		"car-brown.png":
+		{
+			"frame": {"x":1380,"y":1028,"w":132,"h":87},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":132,"h":87},
+			"sourceSize": {"w":132,"h":87}
+		},
+		"car-grey.png":
+		{
+			"frame": {"x":1520,"y":1028,"w":132,"h":87},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":132,"h":87},
+			"sourceSize": {"w":132,"h":87}
+		},
+		"car-violet.png":
+		{
+			"frame": {"x":1660,"y":1028,"w":132,"h":87},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":132,"h":87},
+			"sourceSize": {"w":132,"h":87}
+		},
+		"tree-left.png":
+		{
+			"frame": {"x":1800,"y":1028,"w":53,"h":73},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":53,"h":73},
+			"sourceSize": {"w":53,"h":73}
+		},
+		"tree-right.png":
+		{
+			"frame": {"x":1861,"y":1028,"w":53,"h":73},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":53,"h":73},
+			"sourceSize": {"w":53,"h":73}
+		}
+	}
+}

@@ -1,0 +1,89 @@
+{
+	"meta": {
+		"image": "tanks-tileset.png",
+		"size": {"w":1624,"h":1084},
+		"scale": "1"
+	},
+	"frames": {
+		"tanks-bg.png":
+		{
+			"frame": {"x":4,"y":4,"w":1296,"h":1076},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":1296,"h":1076},
+			"sourceSize": {"w":1296,"h":1076}
+		},
+		"grass-cluster.png":
+		{
+			"frame": {"x":1308,"y":4,"w":312,"h":312},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":312,"h":312},
+			"sourceSize": {"w":312,"h":312}
+		},
+		"grass-tile.png":
+		{
+			"frame": {"x":1308,"y":324,"w":156,"h":156},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":156,"h":156},
+			"sourceSize": {"w":156,"h":156}
+		},
+		"player-down.png":
+		{
+			"frame": {"x":1472,"y":324,"w":132,"h":136},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":132,"h":136},
+			"sourceSize": {"w":132,"h":136}
+		},
+		"player-up.png":
+		{
+			"frame": {"x":1308,"y":488,"w":132,"h":136},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":132,"h":136},
+			"sourceSize": {"w":132,"h":136}
+		},
+		"player-left.png":
+		{
+			"frame": {"x":1448,"y":488,"w":136,"h":132},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":136,"h":132},
+			"sourceSize": {"w":136,"h":132}
+		},
+		"player-right.png":
+		{
+			"frame": {"x":1308,"y":632,"w":136,"h":132},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":136,"h":132},
+			"sourceSize": {"w":136,"h":132}
+		},
+		"tank-green.png":
+		{
+			"frame": {"x":1308,"y":772,"w":112,"h":134},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":112,"h":134},
+			"sourceSize": {"w":112,"h":134}
+		},
+		"tank-grey.png":
+		{
+			"frame": {"x":1428,"y":772,"w":112,"h":134},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":112,"h":134},
+			"sourceSize": {"w":112,"h":134}
+		},
+		"tank-red.png":
+		{
+			"frame": {"x":1308,"y":914,"w":112,"h":134},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":112,"h":134},
+			"sourceSize": {"w":112,"h":134}
+		}
+	}
+}

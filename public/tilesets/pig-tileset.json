@@ -1,0 +1,49 @@
+{
+	"meta": {
+		"image": "pig-tileset.png",
+		"size": {"w":330,"h":315},
+		"scale": "1"
+	},
+	"frames": {
+		"pig-3.png":
+		{
+			"frame": {"x":0,"y":0,"w":117,"h":162},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":117,"h":162},
+			"sourceSize": {"w":117,"h":162}
+		},
+		"pig-1.png":
+		{
+			"frame": {"x":117,"y":0,"w":108,"h":153},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":108,"h":153},
+			"sourceSize": {"w":108,"h":153}
+		},
+		"pig-2.png":
+		{
+			"frame": {"x":225,"y":0,"w":105,"h":153},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":105,"h":153},
+			"sourceSize": {"w":105,"h":153}
+		},
+		"pig-4.png":
+		{
+			"frame": {"x":0,"y":162,"w":102,"h":153},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":102,"h":153},
+			"sourceSize": {"w":102,"h":153}
+        },
+        "pig-5.png":
+		{
+			"frame": {"x":117,"y":0,"w":108,"h":153},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":108,"h":153},
+			"sourceSize": {"w":108,"h":153}
+		}
+	}
+}
