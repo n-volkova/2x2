@@ -1,1 +1,1 @@
-https://n-martynova.github.io/2x2/
+https://n-volkova.github.io/2x2/
