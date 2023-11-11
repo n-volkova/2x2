@@ -1,60 +1,61 @@
 <template>
-   <div class="final-message">
-        <h2>Ура, все игры пройдены!</h2>
-        <!-- <p>{{ message }}</p> -->
+  <div class="final-message">
+    <h2>Ура, все игры пройдены!</h2>
+    <p class="share">
+      Поделитесь с друзьями
+    </p>
 
-        <a v-if="signupUrl" :href="signupUrl" class="get-card-btn" target="_blank">Заказать карту</a>
-
-        <p class="share">Поделитесь с друзьями</p>
-
-        <div class="social">
-            <a :href="fbLink" alt="фейсбук" target="_blank" />
-            <a :href="vkLink" alt="вконтакте" target="_blank" />
-            <a :href="twitterLink" alt="твиттер" target="_blank" />
-        </div>
+    <div class="social">
+      <a
+        :href="fbLink"
+        alt="фейсбук"
+        target="_blank"
+      />
+      <a
+        :href="vkLink"
+        alt="вконтакте"
+        target="_blank"
+      />
+      <a
+        :href="twitterLink"
+        alt="твиттер"
+        target="_blank"
+      />
     </div>
+  </div>
 </template>
 
 <script>
 export default {
-    name: 'FinalScreen',
+  name: 'FinalScreen',
 
-    computed: {
-        inviteUrl() {
-            return 'https://n-martynova.github.io/2x2/'
-        },
+  data () {
+    return {
+      messageVisible: 'Скрестите пальцы, 9 января мы объявим победителей на этой страничке.'
+    };
+  },
 
-        fbLink() {
-            return `https://www.facebook.com/sharer.php?u=${this.inviteUrl}&hashtag=%23рокетбанк_2х2`
-        },
+  computed: {
+    inviteUrl() {
+      return 'https://n-volkova.github.io/2x2/';
+    },
 
-        vkLink() {
-            return `https://vk.com/share.php?url=${this.inviteUrl}&title=РОКЕТБАНК_2х2`
-        },
+    fbLink() {
+      return `https://www.facebook.com/sharer.php?u=${this.inviteUrl}&hashtag=%23рокетбанк_2х2`;
+    },
 
-        twitterLink() {
-            return (
-                `https://twitter.com/intent/tweet?hashtags=рокетбанк_2х2,рокетбанк,2х2&&related=rocketbank` +
+    vkLink() {
+      return `https://vk.com/share.php?url=${this.inviteUrl}&title=РОКЕТБАНК_2х2`;
+    },
+
+    twitterLink() {
+      return (
+        'https://twitter.com/intent/tweet?hashtags=рокетбанк_2х2,рокетбанк,2х2&&related=rocketbank' +
                 `&text=РОКЕТБАНК_2х2&tw_p=tweetbutton&url=${this.inviteUrl}&via=rocketbank`
-            )
-        },
-
-        message() {
-            if (!this.signupUrl) {
-                return 'Скрестите пальцы, 9 января мы объявим победителей на этой страничке.'
-            } else {
-                return 'Теперь осталось заказать карту и ждать результатов розыгрыша, мы опубликуем их на этой страничке 9 января.'
-            }
-        }
+      );
     },
-
-    props: {
-        signupUrl: {
-            type: String,
-            default: ''
-        },
-    },
-}
+  },
+};
 </script>
 
 <style lang="scss">

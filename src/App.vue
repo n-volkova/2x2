@@ -1,157 +1,189 @@
 <template>
-    <div id="app">
-        <img src="@/assets/logo.png" alt="Рокетбанк Х 2x2" class="logo">
-        <div class="container">
-            <h1>Игры, которые<br>повзрослели</h1>
-            <p class="subtitle">Сыграйте в&nbsp;6&nbsp;ретро-игр от&nbsp;Рокетбанка и&nbsp;2&times;2, чтобы получить самый уютный мерч этого года.</p>
+  <div id="app">
+    <img
+      src="@/assets/logo.png"
+      alt="Рокетбанк Х 2x2"
+      class="logo"
+    />
+    <div class="container">
+      <h1>Игры, которые<br />повзрослели</h1>
+      <p class="subtitle">
+        Сыграйте в&nbsp;5&nbsp;ретро-игр от&nbsp;Рокетбанка и&nbsp;2&times;2, чтобы получить самый уютный мерч этого года.
+      </p>
 
-            <section v-if="!showGames" class="info" v-on:scroll.passive="onScroll">
-                <section class="row about">
-                    <div class="text">
-                        <h1>6&nbsp;простых игр&nbsp;&mdash; один мощный бокс</h1>
-                        <p>
-                            Мы&nbsp;с&nbsp;2&times;2 подготовили целую коробку подарков для всех ценителей комфорта, уюта и&nbsp;стиля. В&nbsp;ней вас ждут мягкий шарф, носки, огненная свечка, специальные спички и&nbsp;мыло. Всё это&nbsp;&mdash; в&nbsp;лимитированном дизайне в&nbsp;коллаборации Рокетбанка и&nbsp;2&times;2. 
-                            <br><br> А&nbsp;все новые клиенты получат в&nbsp;подарок ультраклассный стикерпак. 
-                            <br><br>
-                            Нужно всего-то пройти 6&nbsp;наших игр!
-                        </p>
-                        <button @click="showGames = true">Начать</button>
-                    </div>
-                    <div class="images">
-                        <div class="game-img game-1"></div>
-                        <div class="game-img game-2"></div>
-                    </div>
-                </section>
-                <section class="prizes">
-                    <h1>Награды за прохождение</h1>
-                    <h2>Пройдите 6 игр и участвуйте в розыгрыше всего этого добра.</h2>
-                    <div class="prizes-img"></div>
-                    <button @click="showGames = true">Играть</button>
-                </section>
-            </section>
+      <section
+        v-if="!showGames"
+        class="info"
+        @scroll.passive="onScroll"
+      >
+        <section class="row about">
+          <div class="text">
+            <h1>5&nbsp;простых игр&nbsp;&mdash; один мощный бокс</h1>
+            <p>
+              Мы&nbsp;с&nbsp;2&times;2 подготовили целую коробку подарков для всех ценителей комфорта, уюта и&nbsp;стиля. В&nbsp;ней вас ждут мягкий шарф, носки, огненная свечка, специальные спички и&nbsp;мыло. Всё это&nbsp;&mdash; в&nbsp;лимитированном дизайне в&nbsp;коллаборации Рокетбанка и&nbsp;2&times;2. 
+              <br /><br /> А&nbsp;все новые клиенты получат в&nbsp;подарок ультраклассный стикерпак. 
+              <br /><br />
+              Нужно всего-то пройти 5&nbsp;наших игр!
+            </p>
+            <button @click="showGames = true">
+              Начать
+            </button>
+          </div>
+          <div class="images">
+            <div class="game-img game-1" />
+            <div class="game-img game-2" />
+          </div>
+        </section>
+        <section class="prizes">
+          <h1>Награды за прохождение</h1>
+          <h2>Пройдите 5 игр и участвуйте в розыгрыше всего этого добра.</h2>
+          <div class="prizes-img" />
+          <button @click="showGames = true">
+            Играть
+          </button>
+        </section>
+      </section>
 
-            <div v-else class="games-container" @click="containerClicked" :class="verticalAlign">
-                <transition name="fade" mode="out-in">
-                    <component 
-                        :is="current"
-                        @changeScreen="(screen) => changeScreen(screen)"
-                        @showNextBtn="(nextGame) => showNextBtn(nextGame)"
-                        @signupUrlReceived="(url) => signupUrl = url">
+      <div
+        v-else
+        class="games-container"
+        :class="verticalAlign"
+        @click="containerClicked"
+      >
+        <transition
+          name="fade"
+          mode="out-in"
+        >
+          <component 
+            :is="current"
+            @changeScreen="(screen) => changeScreen(screen)"
+            @showNextBtn="(nextGame) => showNextBtn(nextGame)"
+          >
+            <template
+              v-if="levelsCompleted <= 6"
+              #progress
+            >
+              <img
+                :src="currentProgress"
+                alt="Прогресс"
+                class="progress-bar"
+              />
+            </template>
 
-                        <template v-slot:progress v-if="levelsCompleted <= 6">
-                            <img :src="currentProgress" alt="Прогресс" class="progress-bar">
-                        </template>
+            <template #canvas>
+              <div :class="`${current}-canvas`" />
+            </template>
+          </component>
+        </transition>
 
-                        <template v-slot:canvas>
-                            <div :class="`${current}-canvas`"></div>
-                        </template>
-                    </component>
-                </transition>
-
-                <div class="next-btn" :class="nextVisible ? 'visible' : ''" @click="changeScreen(nextGame)"></div>
-            </div>
+        <div
+          class="next-btn"
+          :class="nextVisible ? 'visible' : ''"
+          @click="changeScreen(nextGame)"
+        />
+      </div>
             
-            <footer>
-                <p>КИВИ Банк (АО), qiwi.com, лицензия Банка России № 2241 от 22.01.2015 филиал Рокетбанк.</p>
-                <a href="https://rocketbank.ru/pages/202-terms" target="_blank">Условия акции</a>
-            </footer>
-        </div>
+      <footer>КИВИ Банк (АО), qiwi.com, лицензия Банка России № 2241 от 22.01.2015 филиал Рокетбанк.</footer>
     </div>
+  </div>
 </template>
 
 <script>
-import InitialScreen from './components/InitialScreen.vue'
-import Pizza from './components/Pizza.vue'
-import Beep from './components/Beep.vue'
-import Office from './components/Office.vue'
-import Tanks from './components/Tanks.vue'
-import ff from './components/ff.vue'
-import FinalScreen from './components/FinalScreen.vue'
+import InitialScreen from './components/InitialScreen.vue';
+import Pizza from './components/Pizza.vue';
+import Beep from './components/Beep.vue';
+import Office from './components/Office.vue';
+import Tanks from './components/Tanks.vue';
+import ff from './components/ff.vue';
+import FinalScreen from './components/FinalScreen.vue';
 
-import EventBus from './eventBus'
+import EventBus from './eventBus';
 
-import fancyLog from '@/utils/fancyLog'
-import scroll from 'vue-scrollto'
+import fancyLog from '@/utils/fancyLog';
+import scroll from 'vue-scrollto';
 import { setTimeout } from 'timers';
 
 export default {
-    name: 'app',
-    components: {
-        InitialScreen,
-        Pizza,
-        Beep,
-        Office,
-        Tanks,
-        ff,
-        FinalScreen
+  name: 'App',
+  components: {
+    InitialScreen,
+    Pizza,
+    Beep,
+    Office,
+    Tanks,
+    ff,
+    FinalScreen
+  },
+  data () {
+    return {
+      current: 'initial-screen',
+      levelsCompleted: 0,
+      gameVisible: true,
+      nextVisible: false,
+      nextGame: '',
+      showGames: false
+    };
+  },
+  computed: {
+    verticalAlign() {
+      if (this.current === 'initial-screen' || this.current === 'final-screen') {
+        return 'vertical-centered';
+      } else {
+        return '';
+      }
     },
-    data () {
-        return {
-            current: 'initial-screen',
-            levelsCompleted: 0,
-            gameVisible: true,
-            nextVisible: false,
-            nextGame: '',
-            signupUrl: '',
-            showGames: false
-        }
+    currentProperties() {
+      if (this.current === 'ff') {
+        return { gameVisible: this.gameVisible };
+      } else {
+        return undefined;
+      }
     },
-    computed: {
-        verticalAlign() {
-            if (this.current === 'initial-screen' || this.current === 'final-screen') {
-                return 'vertical-centered'
-            } else {
-                return ''
-            }
-        },
-        currentProperties() {
-            if (this.current === 'ff') {
-                return { gameVisible: this.gameVisible }
-            } else if (this.current === 'final-screen') {
-                return { signupUrl: this.signupUrl }
-            }
-        },
-        currentProgress() {
-            return require(`@/assets/progress/${this.levelsCompleted}.png`)
-        }
-    },
-    created() {
-        fancyLog()
-    },
-    mounted() {
-        window.addEventListener('touchstart', (e) => {
-            e.preventDefault()
-        })
-    },
-    methods: {
-        changeScreen(screen) {
-            if (this.current !== 'initial-screen' && this.current !== 'final-screen') {
-                this.$audio.stop('finish')
-                this.$audio.start('button')
-                this.levelsCompleted++
-            }
-            scroll.scrollTo('.games-container', 300)
-            this.nextVisible = false
-            if (this.nextGame === 'final-screen') {
-                this.gameVisible = false
-                setTimeout(() => {
-                    this.current = screen
-                }, 100)
-            } else {
-                this.current = screen
-            }
-        },
-
-        showNextBtn(nextGame) {
-            this.nextGame = nextGame
-            this.nextVisible = true
-        },
-
-        containerClicked() {
-            EventBus.$emit('containerClicked')
-        }
+    currentProgress() {
+      return require(`@/assets/progress/${this.levelsCompleted}.png`);
     }
-}
+  },
+  created() {
+    fancyLog();
+  },
+  mounted() {
+    window.addEventListener('touchstart', this.touchListener);
+  },
+  beforeDestroy() {
+    window.removeEventListener('touchstart', this.touchListener);
+  },
+  methods: {
+    touchListener(e) {
+      e.preventDefault();
+    },
+    changeScreen(screen) {
+      if (this.current !== 'initial-screen' && this.current !== 'final-screen') {
+        this.$audio.stop('finish');
+        this.$audio.start('button');
+        this.levelsCompleted++;
+      }
+      scroll.scrollTo('.games-container', 300);
+      this.nextVisible = false;
+      if (this.nextGame === 'final-screen') {
+        this.gameVisible = false;
+        setTimeout(() => {
+          this.current = screen;
+        }, 100);
+      } else {
+        this.current = screen;
+      }
+    },
+
+    showNextBtn(nextGame) {
+      this.nextGame = nextGame;
+      this.nextVisible = true;
+    },
+
+    containerClicked() {
+      EventBus.$emit('containerClicked');
+    }
+  }
+};
 </script>
 
 <style lang="scss">
@@ -578,22 +610,15 @@ export default {
     }
 
     footer {
-        user-select: none;
         text-align: center;
+        font-size: 11px;
+        font-weight: 400;
+
         @media (min-width:880px) {
             margin: 6vh 0 50px;
         }
         @media (max-width:879px) {
             margin: 3vh 0 50px;
-        }
-        p {
-            font-size: 11px;
-            font-weight: 400;
-        }
-        a {
-            font-size: 11px;
-            color: white;
-            text-decoration: underline;
         }
     }
 </style>

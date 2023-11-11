@@ -1,60 +1,68 @@
 <template>
-    <div v-if="messageVisible" class="message-wrapper">
-        <transition name="fade" mode="out-in">
-            <stampede v-if="stampedeVisible" @codeSent="onCodeSent($event)" :fixedutm="utm"/>
+  <div
+    v-if="messageVisible"
+    class="message-wrapper"
+  >
+    <transition
+      name="fade"
+      mode="out-in"
+    >
+      <stampede
+        v-if="stampedeVisible"
+        :fixedutm="utm"
+        @codeSent="onCodeSent($event)"
+      />
 
-            <div v-else class="message">
-                <p v-if="isClient">
-                    Вы в игре! Пройдите все 6 уровней и участвуйте в розыгрыше топового мерча в лимитированном дизайне от Рокетбанка и 2х2.
-                    <br> Погнали?
-                </p>
-                <p v-else>
-                    Вы ещё не клиент! Нужно срочно это исправить. Закажите карту Рокетбанка, получите вместе с ней ультраклассный стикерпак и участвуйте в розыгрыше топового мерча в лимитированном дизайне от Рокетбанка и 2х2.
-                </p>
-                <a v-if="!isClient" :href="signupUrl" class="get-card-btn" target="_blank">Заказать карту</a>
-                <div class="play-btn" @click="startGame">Играть!</div>
-            </div>
-        </transition>
-    </div>
+      <div
+        v-else
+        class="message"
+      >
+        <p v-if="isClient">
+          Вы в игре! Пройдите все 6 уровней и участвуйте в розыгрыше топового мерча в лимитированном дизайне от Рокетбанка и 2х2.
+          <br /> Погнали?
+        </p>
+        <p v-else>
+          Вы ещё не клиент! Нужно срочно это исправить. Закажите карту Рокетбанка, получите вместе с ней ультраклассный стикерпак и участвуйте в розыгрыше топового мерча в лимитированном дизайне от Рокетбанка и 2х2.
+        </p>
+        <div
+          class="play-btn"
+          @click="startGame"
+        >
+          Играть!
+        </div>
+      </div>
+    </transition>
+  </div>
 </template>
 
 <script>
 
 export default {
-    data () {
-        return {
-            messageVisible: false,
-            stampedeVisible: true,
-            isClient: false,
-            signupUrl: ''
-        }
-    },
-    computed: {
-        utm() {
-            return window.location.search;
-        }
-    },
-    mounted() {
-        this.startGame()
-    },
-    methods: {
-        onCodeSent(res) {
-            this.isClient = res.client
-            this.stampedeVisible = false
-            if (!res.client) {
-                this.signupUrl = this.utm ? res.signupUrl + this.utm : res.signupUrl
-                this.$emit('signupUrlReceived', this.signupUrl)
-            }
-        },
-        startGame() {
-            this.$audio.start('button')
-            this.messageVisible = false
-            setTimeout(() => {
-                this.$emit('changeScreen', 'beep')
-            }, 100)
-        }
+  data () {
+    return {
+      messageVisible: false,
+      stampedeVisible: true,
+      isClient: false,
+    };
+  },
+  computed: {
+    utm() {
+      return window.location.search;
     }
-}
+  },
+  mounted() {
+    this.startGame();
+  },
+  methods: {
+    startGame() {
+      this.$audio.start('button');
+      this.messageVisible = false;
+      setTimeout(() => {
+        this.$emit('changeScreen', 'beep');
+      }, 100);
+    }
+  }
+};
 </script>
 
 <style lang="scss">

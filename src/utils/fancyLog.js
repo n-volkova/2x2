@@ -1,8 +1,8 @@
 
 let fancyLog = () => {
-    if (process.env.NODE_ENV === 'production') console.clear() // may be dangerous
+  if (process.env.NODE_ENV === 'production') console.clear(); // may be dangerous
 
-    console.log(`%c
+  console.log(`%c
 
     ██████╗  ██████╗  ██████╗██╗  ██╗███████╗████████╗
     ██╔══██╗██╔═══██╗██╔════╝██║ ██╔╝██╔════╝╚══██╔══╝
@@ -19,9 +19,9 @@ let fancyLog = () => {
      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝╚══════╝      
 
 
-`, 'font-family: "Courier New";')
-}
+`, 'font-family: "Courier New";');
+};
 
 // edit here: http://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow&t=ROCKET%0AGAMES
 
-export default fancyLog
+export default fancyLog;
