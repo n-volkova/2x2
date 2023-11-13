@@ -6,8 +6,13 @@
       class="logo"
     />
     <div class="container">
-      <h1>Игры, которые<br />повзрослели</h1>
-      <p class="subtitle">
+      <h1 v-if="!showGames">
+        Игры, которые<br />повзрослели
+      </h1>
+      <p
+        v-if="!showGames"
+        class="subtitle"
+      >
         Сыграйте в&nbsp;5&nbsp;ретро-игр от&nbsp;Рокетбанка и&nbsp;2&times;2, чтобы получить самый уютный мерч этого года.
       </p>
 

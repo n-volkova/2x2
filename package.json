@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "vue-cli-service serve",
-    "dev": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "start": "vue-cli-service serve --openssl-legacy-provider",
+    "dev": "vue-cli-service serve --openssl-legacy-provider",
+    "build": "NODE_OPTIONS='--openssl-legacy-provider' vue-cli-service build"
   },
   "dependencies": {
     "gsap": "^2.1.3",
